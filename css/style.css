@@ -46,7 +46,7 @@ ul{
     --fourth-color: #373f49;
     --white-color: #fff;
     --black-color: #000;
-    --section-padding: 40px;
+    --section-padding: 100px;
     --transition-duration: .3s;
 }
 /* END VARIALBLES */
@@ -54,7 +54,12 @@ ul{
 
 /* START COMPONENTS */
 .section-heading{
-
+    text-align: center;
+}
+.section-heading h1{
+    margin-bottom: 100px;
+    font-weight: 600;
+    font-size: 40px;
 }
 
 /* ***********************  END COMPONENTS  ******************************** */
@@ -416,7 +421,95 @@ header .container nav .sign-in a:last-child{
     font-size: 11px;
     background-color: rgba(0, 0, 0, .6);
     color: white;
-
-
 }
 /* END   LANDING  */
+
+/* START SOCIAL  */
+.social{
+    padding-top: calc( var(--section-padding) + 20px);
+    padding-bottom: var(--section-padding);
+    box-shadow: 0 0 5px 10px rgb(245, 241, 241);
+}
+.social .container{
+    text-align: center;
+}
+.social .container .text p{
+    font-size: 1.5rem;
+    padding: 10px;
+    color: var(--third-color);
+}
+.social .container .text p a.getting-hired{
+    color: var(--main-color);
+}
+.social .container .brands{
+    margin-top: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.social .container .brands img{
+    max-width: 100%;
+}
+/* END   SOCIAL  */
+/* START JOININ  */
+.joining{
+    padding-top: var(--section-padding);
+    padding-bottom: var(--section-padding);
+}
+.joining .container{
+
+}
+.joining .container article{
+    display: flex;
+    /* flex-wrap: wrap; */
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 40px;
+}
+@media (max-width: 767px) {
+    .joining .container article{
+        flex-direction: column;
+        text-align: center;
+    }
+    
+}
+.joining .container article img{
+    /* flex-basis: 100px; */
+    max-width: 360px;
+    /* width: 400px; */
+}
+
+.joining .container article .text{
+    flex-basis: 50%;
+}
+@media (max-width: 767px) {
+    .joining .container article img{
+        order: -1;
+        max-width: 200px;
+        margin-bottom: 15px;
+    }
+    
+}
+@media (max-width: 991px) {
+    .joining .container article img{
+        max-width: 300px;
+    }
+    
+}
+.joining .container article .text h3{
+    font-size: 30px;
+    font-weight: bold;
+}
+.joining .container article .text p{
+    font-size: 22px;
+    letter-spacing: 1.6px;
+    line-height: 1.6;
+    color: var(--third-color);
+    padding: 15px 5px;
+}
+.joining .container article .text p a{
+    color: var(--main-color);
+    text-decoration: none;
+}
+/* END   JOININ  */
