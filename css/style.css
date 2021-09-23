@@ -286,7 +286,6 @@ header .container nav .sign-in > a{
         margin-bottom: 20px;
     }
     header .container nav .sign-in a:last-child{
-        /* margin-bottom: 100px; */
     }
 }
 header .container nav .sign-in a:first-child{
@@ -312,119 +311,111 @@ header .container nav .sign-in a:last-child{
 /* END   HEADER  */
 
 /* ******************START LANDING ************************ */
+
 .landing{
-    position:relative;
+    overflow: hidden;
 }
 .landing .container{
-    position: relative;
-    height: calc(100vh - 195px );
-}
 
-@media(max-width: 991px){
+}
+@media(min-width: 992px){
+    .landing{
+        /* height: 100vh; */
+        height: 82vh;
+        position: relative;
+    }
     .landing .container{
-        height: 600px;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        /* height: 100vh; */
+        height: 82vh;
     }
 }
-.landing .container .intro{
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-
+.landing .pic {
+    display: none;
 }
-.landing .container .intro .text{
-    width: 60%;
-    max-width: 100%;
-}
-@media(max-width: 767px){
-    .landing .container .intro{
-        top: 100%;
+@media(min-width: 992px){
+    .landing .pic{
+        display: block;
+        position: absolute;
+        right: 28px;
+        bottom: 0;
+        z-index: 4;
+        transform: scale(1.1);
+    }
+    .landing .pic img{
+        max-width: 100%;
+    }
+    .landing .pic::after{
+        content: "Founder & Lead Instructor, Andrei Neagoie";
+        position: absolute;
+        bottom: 32px;
+        right: 0;
+        display: block;
+        padding: 3px 20px;
+        font-size: 11px;
+        background-color: rgba(0, 0, 0, .6);
+        color: white;
     }
 }
-@media(max-width: 991px){
-    .landing .container .intro{
-        top: 48%;
-    }
-    .landing .container .intro .text{
-        width: 100%;
+.landing .container .content{
+    padding: 40px 0;
+}
+.landing .container .content h1{
+    font-size: 30px;
+}
+@media(min-width: 768px){
+    .landing .container .content h1{
+        font-size: 40px;
     }
 }
-.landing .container .intro .text h1{
-    font-size: 45px;
-    font-weight: 600;
+@media(min-width: 992px){
+    .landing .container .content{
+        flex-basis: 70%;
+    }
+    .landing .container .content h1{
+        font-size: 50px;
+    }
 }
-.landing .container .intro .text p{
+.landing .container .content p{
     font-size: 20px;
+    line-height: 1.6;
     color: var(--third-color);
-    font-weight: normal;
-    line-height: 1.5;
-    max-width: 95%;
-    padding-right: 15px;
-
-
+    /* max-width: 100%; */
 }
-.landing .container .intro .links{
-    margin-top: 20px;
-    text-align: left;
+.landing .container .content .links{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
-.landing .container .intro .links a{
-    font-size: 23px;
+.landing .container .content .links a{
     text-decoration: none;
     color: var(--main-color);
-}
-.landing .container .intro .links a:first-child{
-    border: 1px solid var(--main-color);
-    border-radius: 20px;
     padding: 10px 20px;
-    margin-left: 20px;
+    margin-top: 10px;
+}
+.landing .container .content .links a:first-of-type{
+    border-radius: 15px;
     background-color: var(--main-color);
-    color: white;
-    margin-right: 20px;
-}
-@media(max-width:767px){
-    .landing .container .intro .links{
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-    }
-    .landing .container .intro .links a{
-        margin-bottom: 25px;
-    }
-}
-.landing .pic{
-    position: absolute;
-    top: -27px;
-    right: 27px;
+    color: var(--white-color);
 
 }
-.landing .pic img{
-    max-width: 100%;
-    max-height: 100%;
-    transform: scale(1.1);
-}
-@media(max-width: 991px){
-    .landing .pic{
-        display: none;
+@media(min-width: 768px){
+    .landing .container .content .links{
+        flex-direction: row;
+        justify-content: flex-start;
+        margin-top: 20px;
     }
 }
 
-.landing .pic::before{
-    content: "Founder & Lead Instructor, Andrei Neagoie";
-    position: absolute;
-    bottom: 3px;
-    display: block;
-    padding: 3px 20px;
-    right: 0;
-    font-size: 11px;
-    background-color: rgba(0, 0, 0, .6);
-    color: white;
-}
 /* END   LANDING ************************************** */
 
 /* START SOCIAL  */
 .social{
     padding-top: calc( var(--section-padding) + 20px);
     padding-bottom: var(--section-padding);
-    box-shadow: 0 0 5px 10px rgb(245, 241, 241);
+    box-shadow: -1px -5px 10px 0px rgb(226, 224, 224);
 }
 .social .container{
     text-align: center;
